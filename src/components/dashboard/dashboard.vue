@@ -1,18 +1,4 @@
 <template>
-    <!--
-        <div class="item one" @click="clickChart('1')" style="transform: translate(-20.4%,-12.5%) scale(0.25)">
-          <relation></relation>
-        </div>
-        <div class="item two" @click="clickChart('2')" style="transform: translate(-20.4%,12.5%) scale(0.25)">
-          <column></column>
-        </div>
-        <div class="item three" @click="clickChart('3')" style="transform: translate(-20.4%,-37.5%) scale(0.25)">
-          <lineyear></lineyear>
-        </div>
-        <div class="item four active" @click="clickChart('4')" style="transform: translate(43.7%, 0) scale(1)">
-        <point></point>
-        </div>
-        <div class="item five" @click="clickChart('5')" style="transform: translate(-20.4%, 37.5%) scale(0.25)">-->
         <scatter></scatter>
 </template>
 
