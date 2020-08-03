@@ -6,7 +6,7 @@
     width 100%
     height 100%
     margin-top -60px
-    margin-left -50px
+    margin-left -40px
 </style>
 
 <template>
@@ -34,16 +34,6 @@ export default {
         'CLA', 'MOp', 'MOs', 'ORBl', 'ORBvl', 'RSPagl', 'RSPd', 'RSPv', 'SSp-bfd', 'SSp-ll',
         'SSp-m', 'SSp-n', 'SSp-ul', 'SSs', 'TEa', 'VISa', 'VISam', 'VISl', 'VISp', 'CP',
         'GPe', 'OT', 'SI', 'ZI', 'SNr'],
-      data1: [
-        ['LGd', 'LGd', 7.5, 0.75],
-        ['RSPv', 'RSPv', 28, 0.25],
-        ['SSp-bfd', 'SSp-bfd', 25, 0.4],
-        ['SSp-ll', 'SSp-ll', 25, 0.3],
-        ['SSp-m', 'SSp-m', 22, 0.45],
-        ['SSp-n', 'SSp-n', 22, 0.3],
-        ['SSp-ul', 'SSp-ul', 22, 0.58],
-        ['SSs', 'SSs', 22, 0.3]
-      ],
       data: []
     }
   },
@@ -113,6 +103,10 @@ export default {
       },
       xAxis: {
         type: 'category',
+        name: 'Soma Region',
+        nameLocation: 'middle',
+        nameGap: 50,
+        nameTextStyle: { fontSize: 18, color: 'black' },
         data: this.SomaRegion,
         splitLine: {
           show: true,
@@ -133,6 +127,10 @@ export default {
       },
       yAxis: {
         type: 'category',
+        name: 'Arbor Location',
+        nameLocation: 'middle',
+        nameGap: 60,
+        nameTextStyle: { fontSize: 18, color: 'black' },
         axisLabel: {
           interval: 0
         },
@@ -143,52 +141,22 @@ export default {
           }
         }
       },
-      /* visualMap: [
-        {
-          left: '90%',
-          top: '10%',
-          dimension: 0.5,
-          min: 6.5,
-          max: 300,
-          itemWidth: 10,
-          itemHeight: 100,
-          calculable: true,
-          precision: 0.1,
-          text: ['Arbor Length'],
-          textGap: 30,
-          textStyle: {
-            color: 'black'
-          },
-          inRange: {
-            symbolSize: [5, 65]
-          },
-          outOfRange: {
-            symbolSize: [5, 65],
-            color: ['rgba(123,104,238,0.2)']
-          },
-          controller: {
-            inRange: {
-              color: ['rgba(123,104,238,0.8)']
-            },
-            outOfRange: {
-              color: ['#444']
-            }
-          }
-        }
-      ], */
       visualMap: {
         left: '90%',
         top: '10%',
         min: 0,
         max: 1,
+        precision: 2,
         dimension: 3,
         calculable: true,
-        show: true,
+        text: ['Distal Arbor'],
+        textGap: 20,
+        textStyle: {
+          color: 'black',
+          fontSize: 9
+        },
         inRange: {
           color: ['#8d2821', '#dc8b55', '#e8e9ea', '#96b6d6', '#5463cd'].reverse()
-        },
-        textStyle: {
-          color: '#fff'
         }
       },
       series: [
